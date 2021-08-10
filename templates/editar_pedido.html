@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+     <meta charset="UTF-8">
+    <meta autor="jair">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta keywords="tu propio diseño en tu prenda favorita">
+    <link rel="shortcut icon" href="./static/imagenes/logo_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/CSS/editar.css" type="Text/css">
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    }
+        label{
+    font-family: Bahnschrift SemiBold;
+    display: block;
+    width: 100%;
+}
+
+.registro {
+    width: 30%;
+    border: 5px solid #FF2B2B;
+    margin: 30px auto;
+    padding 50px;
+
+}
+article{
+    width: 30%;
+    margin: 20px;
+    padding 40px;
+    bottom: 480px;
+    margin-right: 1.5%;
+    float: left;
+    margin-right: 1.5%;
+    font-family: Bahnschrift SemiBold;
+    text-align:justify;
+
+}
+h1{
+    text-align:center;
+   font-family:Playbill;
+   font-size: 70px;
+}
+
+
+
+.text, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box; /*para solucionar errores de bordes*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+
+}
+.box{
+    width: 100%;
+    padding: 10px;
+    font-family: arial;
+}
+input:focus, textarea:focus{
+    border: 1px solid #1668C4;
+
+}
+
+textarea{
+    resize:vertical;
+    max-height: 300px;
+}
+    </style>
+
+
+    <title>Your Design "Tu lo imaginas nosotros lo hacemos real"</title>
+</head>
+<body>
+
+<form action="/editar_pedido/{{pedido.0}}" method="post" class="form">
+<div class="registro">
+        <div class="text">
+         <label for="nombre">Ingresa tu nombre</label>
+        <input type="text" placeholder="Escribe tu nombre" id="nombre" name="nombre" value="{{pedido.1}}">
+
+         <label for="correo">Ingresa tu correo electronico</label>
+         <input type="text" placeholder="Correo" id="correo" name="correo" value="{{pedido.2}}">
+        </div>
+
+    <div class="box">
+    <label>Selecciona el tipo de producto</label>
+    <input type="checkbox" name="playera" id="playera" value="{{pedido.3}}" checked >Playera
+    <input type="checkbox" name="Gorra" id="gorra" value="gorra" >Gorra
+    <input type="checkbox" name="Tenis" id="teni" value="teni" >Tenis
+    </div>
+
+   <div class="text">
+       <label for="archivo">Puedes enviar la muestra de tu diseño en este apartado</label>
+       <input type="text" name="file" id="archivo" value="{{pedido.4}}">
+    <br><br>
+    <label for="descripcion">Describe tu producto, tallas y cantidad</label>
+       <textarea id="descripcion" name="descripcion">{{pedido.5}}</textarea>
+
+    <input type="submit" value="Actualizar">
+    </div>
+</div>
+</form>
+
+</body>
+</html>

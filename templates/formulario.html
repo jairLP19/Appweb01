@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta autor="jair">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta keywords="tu propio diseño en tu prenda favorita">
+    <link rel="shortcut icon" href="./static/imagenes/logo8_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/CSS/formulario.css" type="Text/css">
+
+    <title>Your Design "Tu lo imaginas nosotros lo hacemos real"</title>
+</head>
+
+<body>
+<!-- Area de la cabecera -->
+<header>
+<div class="titulo">
+    <img src="./static/imagenes/o.png">
+
+
+<!-- Area del menu de cabecera-->
+    <div class="menu">
+    <nav>
+        <ul>
+            <li><a href="/index">Inicio</a></li>
+            <li><a href="/info">Acerca de nosotros</a> </li>
+            <li><a href="#">Pide tu estilo</a></li>
+        </ul>
+    </nav>
+    </div>
+</div>
+</header>
+
+<div class="cont">
+<h1>Envianos tu petición</h1>
+
+<article>
+    <p>En este apapartado podras enviar tu peteticion, no te onvides de mandar una brebe descripcion y si ya posees una
+    munestra de diseño puedes enviarla en el apartado de subir archivo</p><br>
+    <img src="./static/imagenes/muestra.png">
+</article>
+
+<form action="{{url_for('guardar_pedido')}}" method="post" class="form">
+<div class="registro">
+        <div class="text">
+         <label for="nombre">Ingresa tu nombre</label>
+        <input type="text" placeholder="Escribe tu nombre" id="nombre" name="nombre">
+
+         <label for="correo">Ingresa tu correo electronico</label>
+         <input type="text" placeholder="Correo" id="correo" name="correo">
+        </div>
+
+    <div class="box">
+    <label>Selecciona el tipo de producto</label>
+    <input type="checkbox" name="playera" id="playera" value="playera" >Playera
+    <input type="checkbox" name="Gorra" id="gorra" value="gorra" >Gorra
+    <input type="checkbox" name="Tenis" id="teni" value="teni" >Tenis
+    </div>
+
+   <div class="text">
+       <label for="archivo">Puedes enviar la muestra de tu diseño en este apartado</label>
+       <input type="file" name="file" id="archivo" >
+    <br><br>
+    <label for="descripcion">Describe tu producto, tallas y cantidad</label>
+       <textarea id="descripcion" name="descripcion"></textarea>
+
+    <input type="submit" value="Enviar">
+    </div>
+</div>
+</form>
+    <br><br>
+
+    <div>
+        <h1 class="titulo">Pedidos</h1>
+    </div>
+    <div class="tabla">
+        <table>
+           <thead>
+            <tr>
+                <td>Nombre Del cliente</td>
+                <td>Correo</td>
+                <td>Tipo de pedido</td>
+                <td>Archivo</td>
+                <td>Descricion</td>
+                <td>Editar</td>
+                <td>Eliminar</td>
+            </tr>
+           </thead>
+            <tbody>
+
+                {%for pedido in ver_pedido%}
+                <tr>
+                    <td>{{pedido.1}}</td>
+                    <td>{{pedido.2}}</td>
+                    <td>{{pedido.3}}</td>
+                    <td>{{pedido.4}}</td>
+                    <td>{{pedido.5}}</td>
+
+                    <td><a href="/consultar_pedido/{{pedido.0}}">Editar</a></td>
+                    <td><a href="/eliminar_pedido/{{pedido.0}}">Eliminar</a></td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</div>
+
+ <!--pie de de pagina-->
+    <footer>
+    <p>Copyright © 2021 You Design. Todos los derechos reservados.</p>
+    </footer>
+
+
+    </body>
+
+</html>
+

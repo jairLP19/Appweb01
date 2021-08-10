@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ background-image: url(/static/imagenes/fonod.jpg);
+ background-repeat: no-repeat;
+ background-size: 2000px;
+
+}
+
+/* titulo */
+.titulo,.contenido,footer{
+    /*color de fondo*/
+    width: 90%;
+    margin: 20px auto; /*centra el area*/
+    max-width:1000px;
+}
+
+/*menu*/
+header nav{/*area en la que se encuantra*/
+    background:#000;
+    overflow: hidden; /*limpia los float*/
+}
+header nav ul{
+    list-style: none /*quita los puntos de la lista*/
+}
+header nav ul li{
+    float: left; /*apila los atributos de la lista una despues de otro pero elimina fondo */
+}
+header nav ul li a{
+    padding: 10px 20px; /*crea un area de edicion*/
+    display: block;
+    color:#fff; /*color de letra*/
+    text-decoration: none; /*quita subrayado*/
+    font-family: Origin Tech Demo;
+}
+header nav ul li a:hover{/*para cambiar el color del menu al poner el cursor*/
+    background: #888C8C;
+}
+
+/*contenido*/
+
+.arriba{
+    width: 100%;
+    background: #26043C;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    color: #3DE7DD;
+    font-family: Century Gothic;
+    font-size: 18px;
+}
+.izquierda{
+  background: #BE9AEE;
+  float: left;
+  width:18.5%;
+  margin-right: 1.5%;
+  padding-bottom: 450px; /*para expandir hacia abajo*/
+}
+.enlases{
+
+}
+
+
+.tennis{
+  margin-left: 200px;
+  padding-left: 20px;
+}
+.gorras{
+  margin-left: 200px;
+  padding-left: 20px;
+
+}
+.playeras{
+    position:relative;
+    bottom: 480px;
+    float: right;
+
+}
+
+
+footer{
+    position:relative;
+    bottom: 470px;
+    background: #000;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+    font-family:Century Gothic;
+    color: #fff;
+}

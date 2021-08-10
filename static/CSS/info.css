@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ background-image: url(/static/imagenes/fonod.jpg);
+ background-repeat: no-repeat;
+ background-size: 2000px;
+}
+
+/* titulo */
+.titulo,.contenido,footer,.cont,.imagen{
+   /*color de fondo*/
+    width: 90%;
+    margin: 20px auto; /*centra el area*/
+    max-width:1000px;
+}
+
+/*menu*/
+header nav{/*area en la que se encuantra*/
+    background:#000;
+    overflow: hidden; /*limpia los float*/
+}
+header nav ul{
+    list-style: none /*quita los puntos de la lista*/
+}
+header nav ul li{
+    float: left; /*apila los atributos de la lista una despues de otro pero elimina fondo */
+}
+header nav ul li a{
+    padding: 10px 20px; /*crea un area de edicion*/
+    display: block;
+    color:#fff; /*color de letra*/
+    text-decoration: none; /*quita subrayado*/
+    font-family: Origin Tech Demo;
+}
+header nav ul li a:hover{/*para cambiar el color del menu al poner el cursor*/
+    background: #888C8C;
+}
+/*funete (letra)*/
+h2{
+    font-family: Bahnschrift SemiBold;
+    color: #FF7474;
+    font-weight: bold;
+}
+.contenido{
+    font-family:Century Gothic;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.cont{
+    font-family:Century Gothic;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align:justify ;
+}
+
+/*contenido*/
+.contenido{
+    background: #595EFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align:justify ;
+}
+.cont .articulo{/*posicion*/
+    width:48.5%;
+    margin-right: 1.5%; /*crea margen externo*/
+    float: left;
+
+}
+.cont .articulo article{/*forma*/
+    padding: 20px;
+    background: #3F0850;
+    margin-bottom: 20px;/*crea margen externo*/
+}
+.img{
+    width:50%;
+    float: left;
+}
+
+footer{
+    background: #000;
+    color: #fff;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+    font-family:Century Gothic;
+}

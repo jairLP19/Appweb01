@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ background-image: url(/static/imagenes/fonod.jpg);
+ background-repeat: no-repeat;
+ background-size: 2000px;
+}
+
+/* titulo */
+.titulo,.contenido,footer{
+   /*color de fondo*/
+    width: 90%;
+    margin: 20px auto; /*centra el area*/
+    max-width:1000px;
+}
+
+/*menu*/
+header nav{/*area en la que se encuantra*/
+    background:#000;
+    overflow: hidden; /*limpia los float*/
+}
+header nav ul{
+    list-style: none /*quita los puntos de la lista*/
+}
+header nav ul li{
+    float: left; /*apila los atributos de la lista una despues de otro pero elimina fondo */
+}
+header nav ul li a{
+    padding: 10px 20px; /*crea un area de edicion*/
+    display: block;
+    color:#fff; /*color de letra*/
+    text-decoration: none; /*quita subrayado*/
+    font-family: Origin Tech Demo;
+}
+header nav ul li a:hover{/*para cambiar el color del menu al poner el cursor*/
+    background: #888C8C;
+}
+
+.cont{
+    background: #fff;
+    width: 90%;
+    margin: 20px auto; /*centra el area*/
+    max-width:1000px;
+}
+label{
+    font-family: Bahnschrift SemiBold;
+    display: block;
+    width: 100%;
+}
+
+.registro {
+    width: 30%;
+    border: 5px solid #FF2B2B;
+    margin: 30px auto;
+    padding 50px;
+
+}
+article{
+    width: 30%;
+    margin: 20px;
+    padding 40px;
+    bottom: 480px;
+    margin-right: 1.5%;
+    float: left;
+    margin-right: 1.5%;
+    font-family: Bahnschrift SemiBold;
+    text-align:justify;
+
+}
+h1{
+    text-align:center;
+   font-family:Playbill;
+   font-size: 70px;
+}
+
+
+
+.text, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box; /*para solucionar errores de bordes*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+
+}
+.box{
+    width: 100%;
+    padding: 10px;
+    font-family: arial;
+}
+input:focus, textarea:focus{
+    border: 1px solid #1668C4;
+
+}
+
+textarea{
+    resize:vertical;
+    max-height: 300px;
+}
+
+footer{
+    background: #000;
+    color: #fff;
+    clear: both;
+    padding: 10px 0px;
+    text-align: center;
+    font-family:Century Gothic;
+}
+
+table{
+
+    background-color: white;
+    text-align: left;
+
+    font-family: arial;
+
+
+}
+th, td {
+    padding: 5px
+}
+
+thead{
+
+    background-color: #246355;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+
+}
