@@ -6,7 +6,7 @@ from flaskext.mysql import MySQL
 
 app = Flask(__name__,static_url_path='/static')
 
-db=SQLAlchemy(app)
+db=SQLAlchemy()
 conn = psycopg2.connect(
 
     host="ec2-52-6-211-59.compute-1.amazonaws.com",
