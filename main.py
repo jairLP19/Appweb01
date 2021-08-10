@@ -6,7 +6,7 @@ from flaskext.mysql import MySQL
 
 app = Flask(__name__,static_url_path='/static')
 
-db=SQLAlchemy()
+db=SQLAlchemy(app)
 conn = psycopg2.connect(
 
     host="ec2-52-6-211-59.compute-1.amazonaws.com",
@@ -112,4 +112,4 @@ def editar_pedido(id):
     return redirect("/formulario")
 
 if __name__ == '__main__':
-   app.run(port = 3000,debug= True)
+   app.run()
